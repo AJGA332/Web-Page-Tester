@@ -7,6 +7,8 @@ body{
     font-family:sans-serif;
     background-color: #e2eaff;
     color: #101632dd;
+    container-type:size;
+    container-name: body;
 }
 /*  -------  HEADER SECTION  -------  */
 .header{
@@ -14,51 +16,88 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    container-type:inline-size;
+    container-name: header;
 }
 .header__logo{
-    width: 80px;
-    margin: 0.5rem 1rem;
+    width: 64px;
 }
 .header__open-nav-butom{
     color: #48e;
     font-size: 4rem;
     font-weight: 700;
-    margin: 0.5rem 1rem;
+    padding: 0.4rem;
 }
 .header__checkbox{
     display: none;
 }
-.header__checkbox:checked ~ .header__nav{
+.header__checkbox:checked ~ .header__nav {
     display: flex;
 }
+.header__checkbox:checked ~ .header__nav {
+    display: flex;
+}
+
 .header__nav{
     display: none;
     background-color: #fff;
-    height: 100vh;
-    width: 100vw;
+    height: 500px;
+    width: 200px;
     position: absolute;
     top: 0;
+    right: 0;
     z-index: -1;
-    justify-content: center;
+    opacity: 95%;
+    padding-left: 10px;
     align-items: center;
 }
 .header__nav-list{
     display: flex;
     flex-direction: column;
-    height: 40vh;
-    margin: auto;
-    justify-content: space-evenly;
+    font-size: 4rem;
 }
 .header__nav-item{
     list-style: none;
 }
 .header__nav-item a {
     color: #48e;
+    font-size: 1.2rem;
 }
 .header__nav-item a:not(:is(:hover, :active)){
     text-decoration: none;
 }
 
 /*  -------  HEADER QUERIES  -------  */
+@container body (min-width: 700px) {
+    .header__nav{
+        background-color: red;
+    }
+    .header{
+        background-color: red;
+    }
+}
 
-/*  -------  HEADER ENDS  ------- /
+
+
+/*  -------  HEADER ENDS  ------- */
+main {
+    position: relative;
+    z-index: -2;
+    display: none;
+}
+.box{
+    margin: 30px;
+    background-color: #e2eaff;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.wrapper{
+    background-color: #fff;
+    display: flex;
+    width: 750px;
+    
+    justify-content: space-evenly;
+}
+
