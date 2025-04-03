@@ -7,18 +7,24 @@ body{
     font-family:sans-serif;
     background-color: #e2eaff;
     color: #101632dd;
-    container-type:size;
+    container-type: inline-size;
     container-name: body;
 }
 /*  -------  HEADER SECTION  -------  */
 .header{
     background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     width: 100%;
     container-type:inline-size;
     container-name: header;
+}
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: auto;
+    position: relative;
 }
 .header__logo{
     width: 64px;
@@ -28,6 +34,7 @@ body{
     font-size: 4rem;
     font-weight: 700;
     padding: 0.4rem;
+    z-index: 2;
 }
 .header__checkbox{
     display: none;
@@ -39,6 +46,7 @@ body{
     display: flex;
 }
 
+
 .header__nav{
     display: none;
     background-color: #fff;
@@ -47,10 +55,10 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -1;
     opacity: 95%;
     padding-left: 10px;
     align-items: center;
+    z-index: 1;
 }
 .header__nav-list{
     display: flex;
@@ -70,21 +78,18 @@ body{
 
 /*  -------  HEADER QUERIES  -------  */
 @container body (min-width: 700px) {
-    .header__nav{
-        background-color: red;
-    }
-    .header{
-        background-color: red;
-    }
+    
+
+
 }
-
-
 
 /*  -------  HEADER ENDS  ------- */
 main {
     position: relative;
-    z-index: -2;
-    display: none;
+    background-color: #fff;
+    margin:1rem auto;
+    padding: 1rem;
+    max-width: 700px;
 }
 .box{
     margin: 30px;
