@@ -26,8 +26,23 @@ body{
     margin: auto;
     position: relative;
 }
+.header__logo-container{
+    color: #48e;
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
 .header__logo{
     width: 64px;
+}
+h1{
+    text-align: center;
+    padding-top: .8rem;
+    line-height: 1.5rem;
+}
+.subtitle{
+    opacity: 60%;
+    font-size: 1.5rem;
 }
 .header__open-nav-butom{
     color: #48e;
@@ -42,10 +57,6 @@ body{
 .header__checkbox:checked ~ .header__nav {
     display: flex;
 }
-.header__checkbox:checked ~ .header__nav {
-    display: flex;
-}
-
 
 .header__nav{
     display: none;
@@ -55,7 +66,7 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    opacity: 95%;
+    opacity: 85%;
     padding-left: 10px;
     align-items: center;
     z-index: 1;
@@ -89,7 +100,7 @@ main {
     background-color: #fff;
     margin:1rem auto;
     padding: 1rem;
-    max-width: 700px;
+    max-width: 750px;
 }
 .box{
     margin: 30px;
