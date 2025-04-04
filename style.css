@@ -7,13 +7,10 @@ body{
     font-family:sans-serif;
     background-color: #e2eaff;
     color: #101632dd;
-    container-type: inline-size;
-    container-name: body;
 }
 /*  -------  HEADER SECTION  -------  */
 .header{
     background-color: #fff;
-
     width: 100%;
     container-type:inline-size;
     container-name: header;
@@ -25,6 +22,7 @@ body{
     max-width: 700px;
     margin: auto;
     position: relative;
+
 }
 .header__logo-container{
     color: #48e;
@@ -39,17 +37,17 @@ h1{
     text-align: center;
     padding-top: .8rem;
     line-height: 1.5rem;
+    background-color: #fff;
 }
 .subtitle{
     opacity: 60%;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .header__open-nav-butom{
     color: #48e;
     font-size: 4rem;
     font-weight: 700;
     padding: 0.4rem;
-    z-index: 2;
 }
 .header__checkbox{
     display: none;
@@ -62,14 +60,15 @@ h1{
     display: none;
     background-color: #fff;
     height: 500px;
-    width: 200px;
+    width: 220px;
     position: absolute;
     top: 0;
     right: 0;
     opacity: 85%;
     padding-left: 10px;
     align-items: center;
-    z-index: 1;
+    z-index: -1;
+    box-shadow: 0 0 15px 0 #10163244;
 }
 .header__nav-list{
     display: flex;
@@ -88,10 +87,10 @@ h1{
 }
 
 /*  -------  HEADER QUERIES  -------  */
-@container body (min-width: 700px) {
-    
-
-
+@container header (max-width: 700px) {
+    .header__logo-container>h2{
+        display: none;
+    }
 }
 
 /*  -------  HEADER ENDS  ------- */
@@ -101,14 +100,9 @@ main {
     margin:1rem auto;
     padding: 1rem;
     max-width: 750px;
+    z-index: -2;
 }
-.box{
-    margin: 30px;
-    background-color: #e2eaff;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-}
+
 .wrapper{
     background-color: #fff;
     display: flex;
